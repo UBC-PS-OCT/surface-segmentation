@@ -29,10 +29,10 @@ two_peaks = maxk(y_localmax_list, 2);
 peak1_y = two_peaks(1);
 peak2_y = two_peaks(2);
 
-id1 = find(y2 == peak1);
+id1 = find(y2 == peak1_y);
 peak1_x = x2(id1);
 
-id2 = find(y2 == peak2);
+id2 = find(y2 == peak2_y);
 peak2_x = x2(id2);
 
 z1 = peak1_x + ((peak2_x - peak1_x)/2);
