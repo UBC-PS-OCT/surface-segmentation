@@ -1,3 +1,5 @@
+%%Running this program requires Xin's surface_smooth.m function and surf_detection_trial.m function%%
+
 image = 'image8.png';
 
 %find the beggining of first and second layers
