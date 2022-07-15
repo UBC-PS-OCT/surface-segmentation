@@ -6,7 +6,7 @@ image = 'image8.png';
 surf1 = [];
 surf2 = [];
 for i = 1:250
-    [point1, point2] = surf_detection_trial(image, i);
+    [point1, point2] = layer_start(image, i);
     surf1 = [surf1, point1];
     surf2 = [surf2, point2];
 end
