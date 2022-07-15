@@ -1,4 +1,4 @@
-%%Running this program requires Xin's surface_smooth.m function and surf_detection_trial.m function%%
+%%%  Running this program requires Xin's surface_smooth.m function, layer_start.m function, and layer_search.m function    %%%
 
 image = 'image8.png';
 
