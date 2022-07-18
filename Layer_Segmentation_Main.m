@@ -3,12 +3,12 @@
 image = 'image8.png';
 
 %find the beggining of first and second layers
-surf1 = [];
-surf2 = [];
+surf1 = zeros(1,250);
+surf2 = zeros(1,250);
 for i = 1:250
     [point1, point2] = layer_start(image, i);
-    surf1 = [surf1, point1];
-    surf2 = [surf2, point2];
+    surf1(i) = point1;
+    surf2(i) = point2;
 end
 
 %smooth both layers
