@@ -1,3 +1,4 @@
+%test
 %load file
 [file, path] = uigetfile('*.png');
 im = imread(strcat(path,file));
