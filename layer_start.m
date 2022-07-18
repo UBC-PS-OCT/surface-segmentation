@@ -38,7 +38,7 @@ function [first_layer, second_layer] = layer_start(pic, index)
     end
     
     % We want peak1_x to represents the first layer. Hence, peak1_x and 
-    %peaki_x needs to be swaped if peak1_x > peaki_x.
+    %peaki_x needs to be swapped if peak1_x > peaki_x.
     if peak1_x > peaki_x
         c = peak1_x;
         peak1_x = peaki_x;
