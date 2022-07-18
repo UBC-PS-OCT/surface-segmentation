@@ -5,11 +5,10 @@ destinationfolder = 'C:\Users\bryan\Desktop\PSOCT program\surface-segmentation\s
 
 rawdata = dir(rawdatafolder);  % You are in the folder where images are there
 files = files(~[files.isdir]);
-%rawdata([rawdata.isdir]) = [];
-N = length(rawdata) ;    % Gives total tiff images in the folder
+N = length(rawdata) ;   
 
 for j = 1:N            % Loop for each image
-    %imshow(files(i).name)  % Opens the image 'i'
+    %imshow(files(i).name)  % Opens the image 'j'
     image = strcat(rawdatafolder, files(j).name);
 
     surf1 = zeros(1,250);
