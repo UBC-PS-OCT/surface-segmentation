@@ -4,12 +4,12 @@ rawdatafolder = 'C:\Users\bryan\Desktop\PSOCT program\surface-segmentation\OCT\'
 destinationfolder = 'C:\Users\bryan\Desktop\PSOCT program\surface-segmentation\save\';
 
 rawdata = dir(rawdatafolder);  % You are in the folder where images are there
-files = files(~[files.isdir]);
+rawdata = rawdata(~[rawdata.isdir]);
 N = length(rawdata) ;   
 
-for j = 1:N            % Loop for each image
+for k = 1:N            % Loop for each image
     %imshow(files(i).name)  % Opens the image 'j'
-    image = strcat(rawdatafolder, files(j).name);
+    image = strcat(rawdatafolder, rawdata(k).name);
 
     surf1 = zeros(1,250);
     surf2 = zeros(1,250);
@@ -34,12 +34,11 @@ for j = 1:N            % Loop for each image
     plot(j, surf2_smooth, 'r-', 'linewidth', 2.5)
 
     % Save the image %
-    print(strcat(destinationfolder, files(i).name), '-dpng');
+    print(strcat(destinationfolder, rawdata(k).name), '-dpng');
+    clear image;
 end
 
 
 %[file, path] = uigetfile('C:\Users\bryan\Desktop\PSOCT program\surface-segmentation\OCT\.png');
 %image = strcat(path,file);
-
-%find the beggining of first and second layers
 
