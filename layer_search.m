@@ -1,9 +1,5 @@
 function [starting_pixel] = layer_search(interval, interval_size, dy, peak_x,x)
-    max_slope = zeros(1,numel(interval)-1);
-    for k=1:numel(interval)-1
-    max_slope(k)=max(dy(interval(k):interval ...
-        (k+1)));
-    end
+    max_slope = max(dy(interval(1):interval(2)));
     
     id3 = find(dy((peak_x-interval_size):peak_x) == max_slope);
     lay_start = x(id3);
