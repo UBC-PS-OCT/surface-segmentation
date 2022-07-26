@@ -1,13 +1,16 @@
 %%%  Running this program requires Xin's surface_smooth.m function, layer_start.m function, and layer_search.m function    %%%
 
-image = 'image8.png';
-im = imread(image)
+[file, path] = uigetfile('C:\Users\bryan\Desktop\PSOCT program\surface-segmentation\OCT\.png');
+image = strcat(path,file);
+
+%image = 'image8.png';
+im = imread(image);
 
 %find the beggining of first and second layers
 surf1 = zeros(1, size(im, 1));
 surf2 = zeros(1, size(im, 1));
 for i = 1:size(im, 1)
-    [point1, point2] = layer_start(image, i);
+    [point1, point2] = layer_start(image, i); %image is passed in as a path
     surf1(i) = point1;
     surf2(i) = point2;
 end
