@@ -6,8 +6,7 @@ I = imgaussfilt(I);
 I = imadjust(I, [0.15,1]);
 imbw = imbinarize(I);
 im_opened = bwareaopen(imbw, 800,8); %600 default
-im_clean = im_opened .* im2double(I);
-processed_image = im_clean;
+I = im_opened .* im2double(I);
 
 %setting the vertical sample line (slice)
 %index = slice position
