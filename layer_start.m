@@ -1,7 +1,13 @@
 function [first_layer, second_layer] = layer_start(pic, index)
 
 % filtering image%
-I = image_filter(pic);
+I = imread(pic);
+I = imgaussfilt(I);
+I = imadjust(I, [0.15,1]);
+imbw = imbinarize(I);
+im_opened = bwareaopen(imbw, 800,8); %600 default
+im_clean = im_opened .* im2double(I);
+processed_image = im_clean;
 
 %setting the vertical sample line (slice)
 %index = slice position
