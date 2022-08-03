@@ -1,9 +1,7 @@
 %%%  Running this program requires Xin's surface_smooth.m function, layer_start.m function, and layer_search.m function    %%%
 
-[file, path] = uigetfile('C:\Users\bryan\Desktop\PSOCT program\surface-segmentation\OCT\.png');
+[file, path] = uigetfile('D:\PS-OCT2\processed\LL_fingerDMG_20220522_021\FullOCT\.png');
 image = strcat(path,file);
-
-%image = 'image8.png';
 im = imread(image);
 
 %find the beggining of first and second layers

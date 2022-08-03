@@ -1,6 +1,6 @@
 function [first_layer, second_layer] = layer_start(pic, index)
 
-% filtering image%
+% filtering image
 I = imread(pic);
 I = imgaussfilt(I);
 I = imadjust(I, [0.15,1]);
@@ -36,8 +36,7 @@ dy = dy(:,1);  %keep first column since all of them are identical
 peaks = maxk(y(TF), length(y(TF)));     
 
 %Find first/highest local max and its x value           
-id1 = find(y == peaks(1));      
-peak1_x = id1(1);   
+peak1_x = find(y == peaks(1));        
 
 %if there is only one peak, find first layer and exit function
 if length(y(TF)) == 1
