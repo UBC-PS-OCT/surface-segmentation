@@ -149,7 +149,7 @@ function [starting_pixel] = layer_search(interval, dy, peak_x, interval_size, la
     end
     
     if layer_num == 1
-        starting_pixel  = peak_x + x_values - 1 + 10;
+        starting_pixel  = peak_x + x_values - 1 - 10;
     else
         starting_pixel = x_values + peak_x - interval_size - 1;
     end
