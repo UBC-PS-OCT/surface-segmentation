@@ -73,6 +73,7 @@ end
 
 %%smooth the 2 segmentation along z
 for i=1:size(surf1,2)
+    % I think we need to replace i with i,:  
     twodmat1(i)=surface_smooth(twodmat1(i),6);
     twodmat2(i)=surface_smooth(twodmat2(i),20);
 end
@@ -80,6 +81,7 @@ end
 %%plot
 for t=100:130
     for i=1:size(surf1,2)
+    % replace i with i,: again? 
     surf1_smooth(i)=twodmat1(i,t);
     surf2_smooth(i)=twodmat2(i,t);
     end
